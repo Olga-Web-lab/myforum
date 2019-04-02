@@ -9,6 +9,7 @@
     <% include libs.ejs %>
 </head>
 <body>
+<div class="container">
 <form method="post" action="/addChannel">
     <div class="form-group">
         <label for="idNameInput">Название</label>
@@ -19,7 +20,8 @@
         <h3 class="text-danger"><%=error.text%></h3>
         <%})%>
     </div>
-    <button type="submit" class="btn btn-success" value="join">Подтвердить</button>
+    <button type="submit" style="margin-left: 300px" class="btn btn-success" value="join">Подтвердить</button>
 </form>
+</div>
 </body>
 </html>

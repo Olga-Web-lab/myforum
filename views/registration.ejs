@@ -7,6 +7,7 @@
     <% include libs.ejs %>
 </head>
 <body>
+<div class="container">
 <form method="post" action="/registration" onsubmit="submit()">
     <div class="form-group">
         <label for="login">Логин</label>
@@ -26,12 +27,13 @@
         <label for="age">Возраст</label>
         <input type="text" required class="form-control" name="age" id="age" placeholder="Введите ваш возраст" pattern="[0-9]+$">
     </div>
-    <button type="submit" class="btn btn-primary">Подтвердить</button>
+    <button type="submit" style="margin-left: 300px" class="btn btn-primary">Подтвердить</button>
 </form>
 <div class="form-group">
     <%errors.forEach(function(error){%>
-        <h3 class="text-danger"><%=error%></h3>
+        <h4 class="text-danger"><%=error%></h4>
     <%})%>
+</div>
 </div>
 </body>
 </html>

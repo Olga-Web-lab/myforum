@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="utf-8" http-equiv="encoding">
-    <title>Заголовок страницы</title>
+    <title>Форум</title>
     <link rel="stylesheet" href="/public/css/news.css">
     <% include libs.ejs %>
 </head>
 <body>
+<div class="container">
 <form method="post" action="/auth">
     <div class="form-group">
         <label for="exampleInputEmail1">Логин</label>
@@ -18,13 +19,14 @@
         <label for="exampleInputPassword1">Пароль</label>
         <input type="password" required name="password" class="form-control" id="password" placeholder="Введите пароль" pattern="[A-Za-z0-9]+$">
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" style="margin-left: 300px;" class="btn btn-primary">Submit</button>
 </form>
 <div class="form-group">
     <%if(request.session.authFailed){%>
-        <h3 class="text-danger">Пользователь с данной парой: логин-пароль не найден</h3>
+        <h4 class="text-danger">Пользователь с данной парой: логин-пароль не найден</h4>
     <%}%>
 </div>
-<h3><a href="/registration">У меня нет учётной записи</a></h3>
+<h4><a href="/registration" class="text-light">У меня нет учётной записи</a></h4>
+</div>
 </body>
 </html>
